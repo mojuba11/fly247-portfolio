@@ -62,20 +62,6 @@
 
 <body class="bg-navy-950 text-slate-100 font-sans antialiased selection:bg-gold-500 selection:text-navy-950">
 
-  <!-- ================= TOP NOTICE BAR ================= -->
-  <header class="bg-navy-900 border-b border-slate-800 text-xs py-2 px-4 sm:px-8 text-slate-300">
-    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
-      <div class="flex items-center space-x-4">
-        <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-gold-500"></i> IATA & NANTA Compliant Operations</span>
-        <span class="hidden sm:inline text-slate-600">|</span>
-        <span class="hidden sm:inline">Lagos (LOS) & Abuja (ABV) Concierge Desk</span>
-      </div>
-      <div class="flex items-center space-x-4 text-gold-400 font-medium">
-        <span>Instant NIP & Invoicing Supported</span>
-      </div>
-    </div>
-  </header>
-
   <!-- ================= NAVIGATION ================= -->
   <nav class="sticky top-0 z-50 bg-navy-950/90 backdrop-blur-md border-b border-slate-800/80 px-4 sm:px-8 py-4">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
@@ -282,20 +268,20 @@
   <section class="py-10 bg-navy-900 border-y border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-8">
       <p class="text-center text-xs uppercase tracking-widest text-slate-400 mb-6 font-semibold">
-        Licensed Operations & Verified Settlement Standards
+        Direct Booking Concierge & Transparent Settlement Standards
       </p>
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 items-center text-center">
         <div class="p-4 rounded-xl border border-slate-800 bg-navy-950/60">
-          <div class="text-gold-400 font-bold text-lg">IATA</div>
-          <div class="text-[11px] text-slate-400">Accredited Agency Standard</div>
+          <div class="text-gold-400 font-bold text-lg">24/7 Desk</div>
+          <div class="text-[11px] text-slate-400">Direct Human Concierge</div>
         </div>
         <div class="p-4 rounded-xl border border-slate-800 bg-navy-950/60">
-          <div class="text-gold-400 font-bold text-lg">NANTA</div>
-          <div class="text-[11px] text-slate-400">Registered Nigerian Operator</div>
+          <div class="text-gold-400 font-bold text-lg">Global & Local</div>
+          <div class="text-[11px] text-slate-400">Worldwide Route Coverage</div>
         </div>
         <div class="p-4 rounded-xl border border-slate-800 bg-navy-950/60">
-          <div class="text-gold-400 font-bold text-lg">NCAA</div>
-          <div class="text-[11px] text-slate-400">Civil Aviation Certified</div>
+          <div class="text-gold-400 font-bold text-lg">Rapid Hold</div>
+          <div class="text-[11px] text-slate-400">Instant Seat Holding</div>
         </div>
         <div class="p-4 rounded-xl border border-slate-800 bg-navy-950/60">
           <div class="text-gold-400 font-bold text-lg">NIP & FX</div>
@@ -519,7 +505,7 @@
 
   <!-- ================= FOOTER ================= -->
   <footer class="bg-navy-950 border-t border-slate-800 py-12 px-4 sm:px-8 text-xs text-slate-400">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
       <div class="space-y-3">
         <div class="flex items-center space-x-2">
           <div class="w-7 h-7 rounded-lg gold-gradient flex items-center justify-center text-navy-950 font-bold">
@@ -530,6 +516,7 @@
         <p class="text-slate-400 leading-relaxed">
           Premium flight & hotel booking solutions for Nigeria's discerning travelers and corporations.
         </p>
+        <p class="pt-2">© <span id="current-year"></span> Fly247 Limited. All rights reserved.</p>
       </div>
 
       <div>
@@ -544,13 +531,6 @@
         <p class="mb-1">Email: bookings@fly247.ng</p>
         <p>Hours: 24 Hours / 7 Days a Week</p>
       </div>
-
-      <div>
-        <h5 class="text-white font-bold mb-3 uppercase tracking-wider text-[11px]">Compliance</h5>
-        <p class="mb-2">NANTA Registration No: 8841-RC</p>
-        <p class="mb-2">NDPR Data Protection Compliant</p>
-        <p>© <span id="current-year"></span> Fly247 Limited. All rights reserved.</p>
-      </div>
     </div>
   </footer>
 
@@ -562,14 +542,11 @@
 
   <!-- ================= JAVASCRIPT ================= -->
   <script>
-    // Initialize Lucide Icons
     lucide.createIcons();
     document.getElementById('current-year').textContent = new Date().getFullYear();
 
-    // Configuration - REPLACE WITH YOUR BUSINESS NUMBER
     const WHATSAPP_NUMBER = "234800359247"; 
 
-    // Tab Switching
     function setTab(tab) {
       const flightsForm = document.getElementById('flights-form');
       const hotelsForm = document.getElementById('hotels-form');
@@ -579,7 +556,6 @@
       const btnH = document.getElementById('tab-hotels');
       const btnC = document.getElementById('tab-corporate');
 
-      // Reset styles
       [btnF, btnH, btnC].forEach(btn => {
         btn.className = "flex-1 py-2 text-center rounded-lg text-slate-400 hover:text-white transition";
       });
@@ -600,7 +576,6 @@
       }
     }
 
-    // Prefill route when card clicked
     function fillRoute(from, to) {
       setTab('flights');
       document.getElementById('flight-from').value = from;
@@ -608,7 +583,6 @@
       document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
     }
 
-    // Submit Flight to WhatsApp
     function submitFlightToWhatsApp(e) {
       e.preventDefault();
       const from = document.getElementById('flight-from').value;
@@ -630,7 +604,6 @@
       window.open(url, '_blank');
     }
 
-    // Submit Hotel to WhatsApp
     function submitHotelToWhatsApp(e) {
       e.preventDefault();
       const city = document.getElementById('hotel-city').value;
@@ -649,7 +622,6 @@
       window.open(url, '_blank');
     }
 
-    // Submit Corporate to WhatsApp
     function submitCorporateToWhatsApp(e) {
       e.preventDefault();
       const company = document.getElementById('corp-company').value;
