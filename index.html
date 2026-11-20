@@ -152,57 +152,57 @@
     </div>
   </nav>
 
-  <!-- ================= HERO SECTION (WITH VIDEO BACKGROUND) ================= -->
+  <!-- ================= HERO SECTION (WITH BRIGHT, CLEAN VIDEO BACKGROUND) ================= -->
   <section class="relative pt-14 pb-24 px-4 sm:px-8 overflow-hidden bg-navy-900 min-h-[650px] flex items-center">
-    <!-- Video Element -->
+    <!-- Video Element (Lit up & sharp) -->
     <video
       autoplay
       loop
       muted
       playsinline
       preload="auto"
-      class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none z-0"
+      class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none z-0 brightness-110 contrast-105"
     >
       <source src="images/plane-bg.mp4" type="video/mp4" />
       <source src="plane-bg.mp4" type="video/mp4" />
     </video>
 
-    <!-- Rich Navy Blue Gradient Overlay -->
-    <div class="absolute inset-0 bg-gradient-to-r from-navy-900/95 via-navy-900/85 to-navy-800/75 z-0 pointer-events-none"></div>
+    <!-- Lightened Navy Blue Gradient Overlay (Leaves video clean & visible while preserving text legibility) -->
+    <div class="absolute inset-0 bg-gradient-to-r from-navy-950/75 via-navy-900/45 to-navy-900/20 z-0 pointer-events-none"></div>
 
-    <!-- Subtle Grid Accent -->
-    <div class="absolute inset-0 bg-[radial-gradient(#23467a_1px,transparent_1px)] [background-size:24px_24px] opacity-25 pointer-events-none z-0"></div>
+    <!-- Bottom Fade Seam into Next Section -->
+    <div class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-navy-900/80 to-transparent z-0 pointer-events-none"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
       <!-- Left Copy -->
       <div class="lg:col-span-6 space-y-6 lg:pt-8">
-        <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-navy-800/90 border border-gold-500/40 text-gold-400 text-xs font-semibold uppercase tracking-wider backdrop-blur-md">
+        <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-navy-900/85 border border-gold-500/40 text-gold-400 text-xs font-semibold uppercase tracking-wider backdrop-blur-md shadow">
           <i data-lucide="star" class="w-3.5 h-3.5"></i>
           <span>Dedicated Travel Advisory & Booking</span>
         </div>
 
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight drop-shadow-lg">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight [text-shadow:_0_2px_12px_rgba(7,19,38,0.85)]">
           Excited to travel round the world?<br />
-          <span class="gold-text-gradient">FLY247 got you covered...</span>
+          <span class="gold-text-gradient drop-shadow">FLY247 got you covered...</span>
         </h1>
 
-        <p class="text-slate-200 text-base sm:text-lg max-w-xl font-light leading-relaxed drop-shadow">
+        <p class="text-white text-base sm:text-lg max-w-xl font-normal leading-relaxed [text-shadow:_0_1px_10px_rgba(7,19,38,0.9)]">
           Skip automated call centers and payment hassles. Fly247 delivers premium domestic and international flight bookings, hand-selected hotel suites, and executive concierge services via direct fly247 booking agent assistance.
         </p>
 
         <!-- Proof Points -->
-        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-navy-700/80 max-w-lg">
+        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-white/20 max-w-lg [text-shadow:_0_1px_8px_rgba(7,19,38,0.9)]">
           <div>
             <div class="text-2xl font-bold text-white">50k+</div>
-            <div class="text-xs text-slate-300">Routes Booked</div>
+            <div class="text-xs text-slate-100">Routes Booked</div>
           </div>
           <div>
             <div class="text-2xl font-bold text-gold-400">&lt; 10 min</div>
-            <div class="text-xs text-slate-300">Avg. WhatsApp Reply</div>
+            <div class="text-xs text-slate-100">Avg. WhatsApp Reply</div>
           </div>
           <div>
             <div class="text-2xl font-bold text-white">100%</div>
-            <div class="text-xs text-slate-300">Naira & FX Compliant</div>
+            <div class="text-xs text-slate-100">Naira & FX Compliant</div>
           </div>
         </div>
       </div>
