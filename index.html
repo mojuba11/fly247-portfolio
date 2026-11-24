@@ -72,6 +72,7 @@
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
             serif: ['Playfair Display', 'serif'],
+            calibri: ['Calibri', 'Inter', 'sans-serif'],
           },
           colors: {
             navy: {
@@ -81,6 +82,7 @@
               700: '#1b3864',
             },
             gold: {
+              300: '#ffe082',
               400: '#f5cc5b',
               500: '#d4af37',
               600: '#b8942b',
@@ -154,50 +156,50 @@
 
   <!-- ================= HERO SECTION (WITH BRIGHT, CLEAN VIDEO BACKGROUND) ================= -->
   <section class="relative pt-14 pb-24 px-4 sm:px-8 overflow-hidden bg-navy-900 min-h-[650px] flex items-center">
-    <!-- Video Element (Lit up & sharp) -->
+    <!-- Video Element (Lit up & vivid) -->
     <video
       autoplay
       loop
       muted
       playsinline
       preload="auto"
-      class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none z-0 brightness-110 contrast-105"
+      class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none z-0 brightness-125 contrast-105 saturate-110"
     >
       <source src="images/plane-bg.mp4" type="video/mp4" />
       <source src="plane-bg.mp4" type="video/mp4" />
     </video>
 
     <!-- Lightened Navy Blue Gradient Overlay (Leaves video clean & visible while preserving text legibility) -->
-    <div class="absolute inset-0 bg-gradient-to-r from-navy-950/75 via-navy-900/45 to-navy-900/20 z-0 pointer-events-none"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-navy-950/55 via-navy-900/25 to-transparent z-0 pointer-events-none"></div>
 
     <!-- Bottom Fade Seam into Next Section -->
-    <div class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-navy-900/80 to-transparent z-0 pointer-events-none"></div>
+    <div class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-navy-900/70 to-transparent z-0 pointer-events-none"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
       <!-- Left Copy -->
       <div class="lg:col-span-6 space-y-6 lg:pt-8">
-        <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-navy-900/85 border border-gold-500/40 text-gold-400 text-xs font-semibold uppercase tracking-wider backdrop-blur-md shadow">
+        <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-navy-900/80 border border-gold-400/50 text-gold-300 text-xs font-semibold uppercase tracking-wider backdrop-blur-md">
           <i data-lucide="star" class="w-3.5 h-3.5"></i>
           <span>Dedicated Travel Advisory & Booking</span>
         </div>
 
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-calibri font-bold text-white leading-tight [text-shadow:_0_2px_12px_rgba(7,19,38,0.85)]">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-calibri font-bold text-white leading-tight">
           Excited to travel round the world?<br />
-          <span class="gold-text-gradient">FLY247 got you covered...</span>
+          <span class="text-gold-400" style="text-shadow: none;">FLY247 got you covered...</span>
         </h1>
 
-        <p class="text-white text-base sm:text-lg max-w-xl font-normal leading-relaxed [text-shadow:_0_1px_10px_rgba(7,19,38,0.9)]">
+        <p class="text-white text-base sm:text-lg max-w-xl font-normal leading-relaxed [text-shadow:_0_1px_6px_rgba(7,19,38,0.65)]">
           Skip automated call centers and payment hassles. Fly247 delivers premium domestic and international flight bookings, hand-selected hotel suites, and executive concierge services via direct fly247 booking agent assistance.
         </p>
 
         <!-- Proof Points -->
-        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-white/20 max-w-lg [text-shadow:_0_1px_8px_rgba(7,19,38,0.9)]">
+        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-white/25 max-w-lg [text-shadow:_0_1px_6px_rgba(7,19,38,0.65)]">
           <div>
             <div class="text-2xl font-bold text-white">50k+</div>
             <div class="text-xs text-slate-100">Routes Booked</div>
           </div>
           <div>
-            <div class="text-2xl font-bold text-gold-400">&lt; 3 min</div>
+            <div class="text-2xl font-bold text-gold-300" style="text-shadow: none;">&lt; 3 min</div>
             <div class="text-xs text-slate-100">Avg. WhatsApp Reply</div>
           </div>
           <div>
@@ -430,7 +432,7 @@
             </div>
           </div>
 
-          <p class="text-center text-[11px] text-slate-300 mt-3 flex items-center justify-center gap-1 drop-shadow">
+          <p class="text-center text-[11px] text-slate-300 mt-3 flex items-center justify-center gap-1">
             <i data-lucide="lock" class="w-3 h-3 text-gold-500"></i> Our agent will contact you on the WhatsApp number you entered.
           </p>
         </div>
