@@ -187,16 +187,18 @@
     </div>
   </nav>
 
-  <!-- ================= HERO SECTION (WITH BRIGHT, CLEAN VIDEO BACKGROUND) ================= -->
+  <!-- ================= HERO SECTION (WITH MOBILE-CENTERED BRIGHT VIDEO BACKGROUND) ================= -->
   <section class="relative pt-14 pb-24 px-4 sm:px-8 overflow-hidden bg-navy-900 min-h-[650px] flex items-center">
-    <!-- Video Element (Lit up & vivid) -->
+    <!-- Video Element (Mobile Focal-Point Adjusted & Autoplay Guaranteed) -->
     <video
+      id="hero-bg-video"
       autoplay
       loop
       muted
       playsinline
+      webkit-playsinline
       preload="auto"
-      class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none z-0 brightness-125 contrast-105 saturate-110"
+      class="absolute inset-0 w-full h-full object-cover object-[35%_center] md:object-center pointer-events-none z-0 brightness-125 contrast-105 saturate-110"
     >
       <source src="images/plane-bg.mp4" type="video/mp4" />
       <source src="plane-bg.mp4" type="video/mp4" />
@@ -793,6 +795,13 @@
   <script>
     lucide.createIcons();
     document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Ensure background video plays reliably on mobile devices
+    const heroVideo = document.getElementById('hero-bg-video');
+    if (heroVideo) {
+      heroVideo.muted = true;
+      heroVideo.play().catch(() => {});
+    }
 
     const WHATSAPP_NUMBER = "2348060801737";
     let currentTripType = 'oneway';
